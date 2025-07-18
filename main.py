@@ -1,6 +1,8 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVR
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
@@ -16,7 +18,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # models
 models = {'Linear Regression':LinearRegression(), "KNN (k=3)":KNeighborsRegressor(n_neighbors=3),
-          "Random Forest Regressor":RandomForestRegressor(n_estimators=100, random_state=42)}
+          "Random Forest Regressor":RandomForestRegressor(n_estimators=100, random_state=42),
+          "SVM Regressor":SVR(kernel='linear',C=1,gamma='scale')}
 
 for key, value in models.items():
     train_and_plot(value, key, X_train, X_test, y_train, y_test, X, y)
