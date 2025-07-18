@@ -7,6 +7,7 @@ This project demonstrates and compares several regression models using scikit-le
 - **Linear Regression** – A basic parametric regression model with coefficients and intercept.
 - **K-Nearest Neighbors Regressor (KNN)** – A non-parametric model based on closest training examples.
 - **Random Forest Regressor** – An ensemble method using multiple decision trees to improve prediction accuracy.
+- **Support Vector Regressor (SVR)** – A kernel-based regression model that works well on small and non-linear datasets.
 
 ## Project Structure
 
